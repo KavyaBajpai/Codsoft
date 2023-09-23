@@ -1,2 +1,179 @@
 # Codsoft
 Internship in Cpp at Codsoft.
+#Task 1: NUMBER GUESSING GAME
+#define ll long long int 
+#include<bits/stdc++.h>
+using namespace std;
+//void print(vector<int> v);
+int main()
+{
+    cout<<"WELCOME TO THE NUMBER GUESSING GAME!\n";
+    cout<<"We have a secret number between 1 and 100 with us. Can you guess it?\n";
+    cout<<"Choose your difficulty level according to the following menu:\n";
+    cout<<"1-----Easy\n";
+    cout<<"2-----Medium\n";
+    cout<<"3-----Hard\n";
+    cout<<"4-----EXit\n";
+    
+    cout<<"Enter the level of your choice:  \n";
+    int choice;
+    cin>>choice;
+    
+    while(choice!=4)
+    {
+        srand(time(0));
+    int num = 1 + (rand() % 100);
+    
+    if(choice==1)
+    {
+        cout<<"You have 7 chances to guess the number.\n";
+        for(int i=7; i>0; i--)
+        {   int guess;
+            cout<<"Enter your guess.\n";
+            cin>>guess;
+            
+            if(guess==num)
+            { cout<<"Well done! you guessed the number correctly! The secret number was "<<num<<"\n";
+              cout<<"Thanks for playing! Do play again.\n"; }
+              
+            else
+            {
+                cout<<"No. You did not guess correctly.\n";
+                if(num-guess<=20)
+                cout<<"Your guess was lower.\n";
+                else
+                {
+                    if(num-guess>=21)
+                    cout<<"Your guess was very low.\n";
+                    else
+                    {
+                        if(guess-num<=20)
+                        cout<<"Your guess was higher.\n";
+                        else
+                        {
+                           if(guess-num<=21)
+                           cout<<"Your guess was very high.\n";
+                        }
+                    }
+                }
+            }
+            i--;
+            if(i==0)
+            cout<<"You lost!\n";
+            else
+            {
+                cout<<"You have "<<i<<" chances left.\n";
+            }
+              
+        }
+    }
+    
+    else
+    {
+      if(choice==2)
+      {
+        cout<<"You have 5 chances to guess the number.\n";
+        for(int i=5; i>0; i--)
+        {   int guess;
+            cout<<"Enter your guess.\n";
+            cin>>guess;
+            
+            if(guess==num)
+            { cout<<"Well done! you guessed the number correctly! The secret number was "<<num<<"\n";
+              cout<<"Thanks for playing! Do play again.\n"; }
+              
+            else
+            {
+                cout<<"No. You did not guess correctly.\n";
+                if(num-guess<=20)
+                cout<<"Your guess was lower.\n";
+                else
+                {
+                    if(num-guess>=21)
+                    cout<<"Your guess was very low.\n";
+                    else
+                    {
+                        if(guess-num<=20)
+                        cout<<"Your guess was higher.\n";
+                        else
+                        {
+                           if(guess-num<=21)
+                           cout<<"Your guess was very high.\n";
+                        }
+                    }
+                }
+            }
+            i--;
+            if(i==0)
+            cout<<"You lost!\n";
+            else
+            {
+                cout<<"You have "<<i<<" chances left.\n";
+            }
+              
+        }
+      }
+      
+      else
+      {
+        if(choice==3)
+       {
+        cout<<"You have 3 chances to guess the number.\n";
+        for(int i=3; i>0; i--)
+        {   int guess;
+            cout<<"Enter your guess.\n";
+            cin>>guess;
+            
+            if(guess==num)
+            { cout<<"Well done! you guessed the number correctly! The secret number was "<<num<<"\n";
+              cout<<"Thanks for playing! Do play again.\n";
+              break;}
+              
+            else
+            {
+                cout<<"No. You did not guess correctly.\n";
+                if(num-guess<=20)
+                cout<<"Your guess was lower.\n";
+                else
+                {
+                    if(num-guess>=21)
+                    cout<<"Your guess was very low.\n";
+                    else
+                    {
+                        if(guess-num<=20)
+                        cout<<"Your guess was higher.\n";
+                        else
+                        {
+                           if(guess-num<=21)
+                           cout<<"Your guess was very high.\n";
+                        }
+                    }
+                }
+            }
+            //i--;
+            if(i==1)
+             { cout<<"You lost!\n"; cout<<"The number was "<<num<<".\n";}
+            else
+            {
+                cout<<"You have "<<i<<" chances left.\n";
+            }
+              
+        }
+       }
+      }
+    
+    
+    }
+    
+    cout<<"To play again, enter your choice.\n";
+    cin>>choice;
+    
+   
+    }
+    
+    if(choice==4)
+    { cout<<"Hope you enjoyed!\n";
+      return 0; }
+    
+}
+
