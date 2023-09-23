@@ -1,0 +1,45 @@
+#define ll long long int 
+#include<bits/stdc++.h>
+using namespace std;
+//void print(vector<int> v);
+int main()
+{
+    cout<<"Please enter two numbers."<<"\n";
+    float a,b;
+    cin>>a>>b;
+    cout<<"Please choose an operation from the following menu:"<<"\n";
+    cout<<"1----Addition"<<"\n";
+    cout<<"2----Subtraction"<<"\n";
+    cout<<"3----Multiplication"<<"\n";
+    cout<<"4----Division"<<"\n";
+    
+    int o;
+    cin>>o;
+    
+    if(o==1)
+    cout<<"The sum of "<<a<<" and "<<b<<" is "<<(a+b)<<".\n";
+    else
+    {
+        if(o==2)
+        cout<<"The absolute difference between "<<a<<" and "<<b<<" is "<<abs(a-b)<<".\n";
+        
+        else
+        {
+            if(o==3)
+            cout<<"The product of "<<a<<" and "<<b<<" is "<<(a*b)<<".\n";
+            else
+            {
+                if(o==4)
+                { if(b==0)
+                  cout<<"Sorry, division by zero is not possible.\n";
+                  else
+                  cout<<"The quotient of "<<a<<" and "<<b<<" is "<<(a/b)<<".\n";}
+                else
+                cout<<"Sorry, the entered digit does not match the given menu.\n";
+            }
+        }
+    }
+    
+    return 0;
+}
+
